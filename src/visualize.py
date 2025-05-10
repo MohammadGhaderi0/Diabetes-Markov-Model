@@ -21,9 +21,6 @@ def plot_trajectory(trajectory, states, title="Sample Patient Trajectory"):
     plt.xlabel("Time Step (Months)", fontsize=12)
     plt.ylabel("Health State", fontsize=12)
     plt.grid(True, linestyle="--", alpha=0.7)
-    for i, state in enumerate(trajectory):
-        if i % 10 == 0 or state in [2, 3]:
-            plt.text(i, state + 0.1, states[state], fontsize=10)
     plt.tight_layout()
     plt.savefig("patient_trajectory.png")
     plt.show()
